@@ -1,10 +1,9 @@
 export class FfmpegBuilder {
     private inputPath: string;
-    private outputPath: string;
     private options: Map<string, string> = new Map();
 
     constructor() {
-        this.options.set('-c: v', 'libx264' );
+        this.options.set('-c:v', 'libx264' );
     }
 
     input(inputPath: string): this {  
@@ -31,7 +30,3 @@ export class FfmpegBuilder {
     } 
 }
 
-new FfmpegBuilder()
-    .input('')
-    .setVideoSize(1280, 720)
-    .output('output.mp4');

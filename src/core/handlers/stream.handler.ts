@@ -10,7 +10,7 @@ export class StreamHandler {
         })
         
         stream.stderr.on('data', (data: any) => {
-            this.logger.error(data);
+            this.logger.error(data.toString());
         })
 
         stream.on('close', () => {

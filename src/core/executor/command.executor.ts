@@ -11,7 +11,7 @@ export abstract class ComandExecutor<Input> {
         this.processStream(stream, this.logger);
     }
 
-    protected abstract prompt(): Promise<string>;
+    protected abstract prompt(): Promise<any>;
     protected abstract build(input: Input): ICommandExec;
     protected abstract spawn(command: ICommandExec): ChildProcessWithoutNullStreams;
     protected abstract processStream(stream: ChildProcessWithoutNullStreams, logger: ILogger): void;
